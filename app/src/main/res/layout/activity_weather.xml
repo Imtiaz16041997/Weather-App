@@ -20,17 +20,18 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:background="@drawable/background_file"
             android:hint="Enter city name"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:padding="15dp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:layout_marginTop="8dp"
+            android:padding="15dp"
+            android:layout_weight="1"
             android:layout_marginStart="30dp"
-            tools:ignore="RtlCompat"
             android:id="@+id/edittextcityname"
-            android:drawableLeft="@drawable/location_city"/>
+            android:gravity="center"
+            android:drawableStart="@drawable/location_city"
+            tools:ignore="RtlCompat" />
 
 
         <Button
@@ -38,7 +39,7 @@
             android:layout_height="40dp"
             android:background="@drawable/search"
             android:id="@+id/search"
-
+            android:layout_marginTop="8dp"
             />
 
     </LinearLayout>

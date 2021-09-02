@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -57,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,WeatherActivity.class);
+                startActivity(intent);
+
+
+
 
             }
         });
@@ -146,9 +153,11 @@ public class MainActivity extends AppCompatActivity {
 
 
                 String iconCode = response.body().getWeather().get(0).getIcon();
-                Picasso.get().load(" http://openweathermap.org/img/wn/"+iconCode+"@2x.png")
+                Picasso.get().load("https://openweathermap.org/img/wn/"+iconCode+"@2x.png")
+
                         .placeholder(R.drawable.ic_launcher_background)
                         .into(imageView);
+
 
 
             }
